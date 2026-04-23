@@ -296,3 +296,6 @@ data:
     {{- if not (kindIs "invalid" .Values.defaultSettings.dataEngineLvolClearMethod) }}
     data-engine-lvol-clear-method: {{ include "longhorn.multiTypeSetting" .Values.defaultSettings.dataEngineLvolClearMethod }}
     {{- end }}
+    {{- if not (kindIs "invalid" .Values.defaultSettings.dataEngineLvstoreClusterSize) }}
+    data-engine-lvstore-cluster-size: {{ include "longhorn.multiTypeSetting" .Values.defaultSettings.dataEngineLvstoreClusterSize }}
+    {{- end }}
