@@ -456,6 +456,12 @@ defaultSettings:
   csiStorageCapacityTracking: ~
   # -- Setting that allows Longhorn to query the Kubernetes Metrics Server ('metrics.k8s.io') for pod and node resource usage.
   kubernetesMetricsServerMetricsEnabled: ~
+  # -- Applies only to the V2 Data Engine. Specifies the data clearing method ('none', 'unmap', or 'write_zeroes') used when a logical volume (lvol) is deleted from the SPDK logical volume store.
+  dataEngineLvolClearMethod: ~
+  # -- Applies only to the V2 Data Engine. Specifies the cluster size, in bytes, used when creating the SPDK logical volume store on a disk. Changing this setting does not affect existing logical volume stores.
+  dataEngineLvstoreClusterSize: ~
+  # -- Applies only to the V2 Data Engine. Specifies whether logical volumes (lvols) are thin-provisioned on the SPDK logical volume store.
+  dataEngineLvolThinProvision: ~
 # -- Setting that allows you to update the default backupstore.
 defaultBackupStore:
   # -- Endpoint used to access the default backupstore. (Options: "NFS", "CIFS", "AWS", "GCP", "AZURE")
