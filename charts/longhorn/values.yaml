@@ -438,6 +438,14 @@ defaultSettings:
   dataEngineLogLevel: ~
   # -- Applies only to the V2 Data Engine. Specifies the log flags for the Storage Performance Development Kit (SPDK) target daemon.
   dataEngineLogFlags: ~
+  # -- Applies only to the V2 Data Engine. Specifies the clear method for newly created lvols. Supported values: "unmap", "none". Default is "unmap".
+  dataEngineLvolClearMethod: ~
+  # -- Applies only to the V2 Data Engine. Specifies the cluster size for the SPDK lvol store. Default is the SPDK default (32MB).
+  dataEngineLvstoreClusterSize: ~
+  # -- Applies only to the V2 Data Engine. Specifies whether thin provisioning is enabled for newly created lvols. Default is true.
+  dataEngineLvolThinProvision: ~
+  # -- Applies only to the V2 Data Engine. Controls the pipeline depth for shallow copy operations during replica rebuilds. Higher values allow more concurrent in-flight copy operations. Default is 1 (sequential).
+  dataEngineShallowCopyPipelineDepth: ~
   # -- Setting that freezes the filesystem on the root partition before a snapshot is created.
   freezeFilesystemForSnapshot: ~
   # -- Setting that automatically cleans up the snapshot when the backup is deleted.
