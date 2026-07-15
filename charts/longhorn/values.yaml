@@ -438,6 +438,8 @@ defaultSettings:
   dataEngineLogLevel: ~
   # -- Applies only to the V2 Data Engine. Specifies the log flags for the Storage Performance Development Kit (SPDK) target daemon.
   dataEngineLogFlags: ~
+  # -- Applies only to the V2 Data Engine. Controls the pipeline depth for shallow copy operations during replica rebuilds. Default is 1 (sequential).
+  dataEngineShallowCopyPipelineDepth: ~
   # -- Setting that freezes the filesystem on the root partition before a snapshot is created.
   freezeFilesystemForSnapshot: ~
   # -- Setting that automatically cleans up the snapshot when the backup is deleted.

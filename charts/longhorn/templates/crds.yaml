@@ -1573,6 +1573,15 @@ spec:
                 additionalProperties:
                   type: string
                 type: object
+              replicaTransportAddressMap:
+                additionalProperties:
+                  properties:
+                    rdmaAddress:
+                      type: string
+                    tcpAddress:
+                      type: string
+                  type: object
+                type: object
               requestedBackupRestore:
                 type: string
               requestedDataSource:
@@ -1681,6 +1690,16 @@ spec:
                   type: string
                 nullable: true
                 type: object
+              currentReplicaTransportAddressMap:
+                additionalProperties:
+                  properties:
+                    rdmaAddress:
+                      type: string
+                    tcpAddress:
+                      type: string
+                  type: object
+                nullable: true
+                type: object
               currentSize:
                 format: int64
                 type: string
@@ -1705,6 +1724,10 @@ spec:
               ownerID:
                 type: string
               port:
+                type: integer
+              rdmaPort:
+                type: integer
+              tcpPort:
                 type: integer
               purgeStatus:
                 additionalProperties:
@@ -2136,6 +2159,12 @@ spec:
                           type: integer
                         preferredPath:
                           type: string
+                        rdmaPort:
+                          format: int32
+                          type: integer
+                        tcpPort:
+                          format: int32
+                          type: integer
                         resourceVersion:
                           format: int64
                           type: integer
@@ -2210,6 +2239,12 @@ spec:
                           type: integer
                         preferredPath:
                           type: string
+                        rdmaPort:
+                          format: int32
+                          type: integer
+                        tcpPort:
+                          format: int32
+                          type: integer
                         resourceVersion:
                           format: int64
                           type: integer
@@ -2991,6 +3026,10 @@ spec:
               ownerID:
                 type: string
               port:
+                type: integer
+              rdmaPort:
+                type: integer
+              tcpPort:
                 type: integer
               salvageExecuted:
                 type: boolean

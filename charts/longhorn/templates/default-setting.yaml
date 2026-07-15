@@ -311,3 +311,6 @@ data:
     {{- if not (kindIs "invalid" .Values.defaultSettings.kubernetesMetricsServerMetricsEnabled) }}
     kubernetes-metrics-server-metrics-enabled: {{ .Values.defaultSettings.kubernetesMetricsServerMetricsEnabled }}
     {{- end }}
+    {{- if not (kindIs "invalid" .Values.defaultSettings.dataEngineShallowCopyPipelineDepth) }}
+    data-engine-shallow-copy-pipeline-depth: {{ include "longhorn.multiTypeSetting" .Values.defaultSettings.dataEngineShallowCopyPipelineDepth }}
+    {{- end }}
