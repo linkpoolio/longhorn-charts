@@ -440,6 +440,8 @@ defaultSettings:
   dataEngineLogFlags: ~
   # -- Applies only to the V2 Data Engine. Controls the pipeline depth for shallow copy operations during replica rebuilds. Default is 1 (sequential).
   dataEngineShallowCopyPipelineDepth: ~
+  # -- Applies only to the V2 Data Engine. SPDK num_md_pages_per_cluster_ratio reserved at lvstore creation. Default is 100 (1 page per cluster). Create-time only.
+  dataEngineLvstoreMdPagesPerClusterRatio: ~
   # -- Setting that freezes the filesystem on the root partition before a snapshot is created.
   freezeFilesystemForSnapshot: ~
   # -- Setting that automatically cleans up the snapshot when the backup is deleted.
