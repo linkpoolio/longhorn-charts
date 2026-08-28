@@ -462,6 +462,8 @@ defaultSettings:
   dataEngineLvstoreClusterSize: ~
   # -- Applies only to the V2 Data Engine. Specifies whether logical volumes (lvols) are thin-provisioned on the SPDK logical volume store.
   dataEngineLvolThinProvision: ~
+  # -- Applies only to the V2 Data Engine. IEEE 802.1p / RoCE priority class (0-7) for DSCP-tagging outbound NVMe-oF RDMA traffic. 0 is the RDMA/SPDK default.
+  dataEngineRdmaPriorityClass: ~
 # -- Setting that allows you to update the default backupstore.
 defaultBackupStore:
   # -- Endpoint used to access the default backupstore. (Options: "NFS", "CIFS", "AWS", "GCP", "AZURE")
