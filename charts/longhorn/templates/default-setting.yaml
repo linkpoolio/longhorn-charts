@@ -320,3 +320,6 @@ data:
     {{- if not (kindIs "invalid" .Values.defaultSettings.dataEngineLvolThinProvision) }}
     data-engine-lvol-thin-provision: {{ include "longhorn.multiTypeSetting" .Values.defaultSettings.dataEngineLvolThinProvision }}
     {{- end }}
+    {{- if not (kindIs "invalid" .Values.defaultSettings.dataEngineRdmaPriorityClass) }}
+    data-engine-rdma-priority-class: {{ include "longhorn.multiTypeSetting" .Values.defaultSettings.dataEngineRdmaPriorityClass }}
+    {{- end }}
