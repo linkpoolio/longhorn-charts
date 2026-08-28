@@ -311,3 +311,15 @@ data:
     {{- if not (kindIs "invalid" .Values.defaultSettings.kubernetesMetricsServerMetricsEnabled) }}
     kubernetes-metrics-server-metrics-enabled: {{ .Values.defaultSettings.kubernetesMetricsServerMetricsEnabled }}
     {{- end }}
+    {{- if not (kindIs "invalid" .Values.defaultSettings.dataEngineLvolClearMethod) }}
+    data-engine-lvol-clear-method: {{ include "longhorn.multiTypeSetting" .Values.defaultSettings.dataEngineLvolClearMethod }}
+    {{- end }}
+    {{- if not (kindIs "invalid" .Values.defaultSettings.dataEngineLvstoreClusterSize) }}
+    data-engine-lvstore-cluster-size: {{ include "longhorn.multiTypeSetting" .Values.defaultSettings.dataEngineLvstoreClusterSize }}
+    {{- end }}
+    {{- if not (kindIs "invalid" .Values.defaultSettings.dataEngineLvolThinProvision) }}
+    data-engine-lvol-thin-provision: {{ include "longhorn.multiTypeSetting" .Values.defaultSettings.dataEngineLvolThinProvision }}
+    {{- end }}
+    {{- if not (kindIs "invalid" .Values.defaultSettings.dataEngineRdmaPriorityClass) }}
+    data-engine-rdma-priority-class: {{ include "longhorn.multiTypeSetting" .Values.defaultSettings.dataEngineRdmaPriorityClass }}
+    {{- end }}
