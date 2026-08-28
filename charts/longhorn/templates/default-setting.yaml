@@ -317,3 +317,6 @@ data:
     {{- if not (kindIs "invalid" .Values.defaultSettings.dataEngineLvstoreMdPagesPerClusterRatio) }}
     data-engine-lvstore-md-pages-per-cluster-ratio: {{ include "longhorn.multiTypeSetting" .Values.defaultSettings.dataEngineLvstoreMdPagesPerClusterRatio }}
     {{- end }}
+    {{- if not (kindIs "invalid" .Values.defaultSettings.dataEngineRdmaPriorityClass) }}
+    data-engine-rdma-priority-class: {{ include "longhorn.multiTypeSetting" .Values.defaultSettings.dataEngineRdmaPriorityClass }}
+    {{- end }}
