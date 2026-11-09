@@ -460,6 +460,8 @@ defaultSettings:
   dataEngineLvolClearMethod: ~
   # -- Applies only to the V2 Data Engine. Specifies the cluster size, in bytes, used when creating the SPDK logical volume store on a disk. Changing this setting does not affect existing logical volume stores.
   dataEngineLvstoreClusterSize: ~
+  # -- Applies only to the V2 Data Engine. SPDK num_md_pages_per_cluster_ratio reserved at lvstore creation. Default is 100 (1 page per cluster). Create-time only.
+  dataEngineLvstoreMdPagesPerClusterRatio: ~
   # -- Applies only to the V2 Data Engine. Specifies whether logical volumes (lvols) are thin-provisioned on the SPDK logical volume store.
   dataEngineLvolThinProvision: ~
   # -- Applies only to the V2 Data Engine. IEEE 802.1p / RoCE priority class (0-7) for DSCP-tagging outbound NVMe-oF RDMA traffic. 0 is the RDMA/SPDK default.
