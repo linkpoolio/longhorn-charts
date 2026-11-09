@@ -84,7 +84,7 @@ spec:
       {{- end }}
       {{- end }}
       - name: longhorn-ui
-        image: {{ with (coalesce .Values.global.imageRegistry (include "registry_url" .) .Values.image.longhorn.ui.registry) }}{{ . }}/{{ end }}{{ .Values.image.longhorn.ui.repository }}:{{ .Values.image.longhorn.ui.tag }}
+        image: {{ with (coalesce .Values.image.longhorn.ui.registry .Values.global.imageRegistry (include "registry_url" .)) }}{{ . }}/{{ end }}{{ .Values.image.longhorn.ui.repository }}:{{ .Values.image.longhorn.ui.tag }}
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         volumeMounts:
         - name: nginx-cache
